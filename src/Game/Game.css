@@ -1,0 +1,97 @@
+.game-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-wrapper * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.game-playground {
+  border: 5px solid #8a8a8a;
+  box-shadow: 0 0 0 30px #5f6745;
+  border-radius: 10px;
+}
+.game-grid {
+  display: block;
+  position: relative;
+}
+
+.snake-body {
+  background-color: red;
+  border: 3px solid darkred;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition-property: all;
+  transition-timing-function: linear;
+}
+
+.snake-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+}
+.snake-head::after,
+.snake-head::before {
+  display: block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@keyframes foodAnimation {
+  from {
+    scale: 0.7;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes food-anim {
+  from {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.snake-food {
+  position: absolute;
+  background-color: darkgreen;
+  border: 3px solid green;
+  transition: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  animation: food-anim 0.25s;
+}
+
+.game-menu {
+  position: absolute;
+  text-align: center;
+}
+
+.game-menu button {
+  color: green;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
