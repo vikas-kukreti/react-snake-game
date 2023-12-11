@@ -2,7 +2,7 @@
 
 ![Start Game Screen](screenshots/1.jpeg "Start Game")
 ![Game Playground Screen](screenshots/2.jpeg "Playing Game")
-![Game Over Screen](screenshots/1.jpeg "Game Over")
+![Game Over Screen](screenshots/3.jpeg "Game Over")
 
 
 ### Want to try it out
