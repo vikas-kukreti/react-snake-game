@@ -13,3 +13,11 @@ export function randomFood() {
     emoji: foodList[Math.floor(foodList.length * Math.random())],
   };
 }
+
+export function getHighScore() {
+  return Number.parseInt(localStorage.getItem("highScore") || "0");
+}
+
+export function updateHighScore(score: number) {
+  localStorage.setItem("highScore", score.toString());
+}
