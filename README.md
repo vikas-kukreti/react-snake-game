@@ -22,5 +22,5 @@
 - Give a Star ⭐
 
 ### Connect with me
-- [Write a mail at vikaskukreti10@gmail.com](vikaskukreti10@gmail.com)
+- [Write a mail at vikaskukreti10@gmail.com](mailto:vikaskukreti10@gmail.com)
 - [LinkedIn: https://www.linkedin.com/in/vikas-kukreti/](https://www.linkedin.com/in/vikas-kukreti/)
