@@ -92,6 +92,9 @@ function Game() {
   }
 
   function handleKeypress(e: KeyboardEvent) {
+    if (e.key === " ") {
+      return startGame();
+    }
     const keyMap: { [key: string]: () => void } = {
       ArrowLeft: () => (direction.current = MOVE.LEFT),
       ArrowRight: () => (direction.current = MOVE.RIGHT),
