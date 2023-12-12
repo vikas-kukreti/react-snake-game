@@ -17,7 +17,7 @@ function Game() {
   const timer = useRef<number>();
   const snake = useRef([{ x: GRID_ROWS / 2, y: GRID_COLUMNS / 2 }]);
   const speed = useRef(0);
-  const food = useRef(randomFood());
+  const food = useRef(randomFood(snake.current));
   const highScore = useRef(initialHighScore);
 
   const direction = useRef<MOVE>(MOVE.RIGHT);
@@ -41,7 +41,7 @@ function Game() {
     }
     snake.current.unshift(head);
     if (head.x === food.current.x && head.y === food.current.y) {
-      food.current = randomFood();
+      food.current = randomFood(snake.current);
     } else {
       snake.current.pop();
     }
@@ -73,7 +73,7 @@ function Game() {
   function resetGame() {
     clearInterval(timer.current);
     snake.current = [{ x: GRID_ROWS / 2, y: GRID_COLUMNS / 2 }];
-    if (over.current) food.current = randomFood();
+    if (over.current) food.current = randomFood(snake.current);
     over.current = false;
     direction.current = MOVE.RIGHT;
     setStarted(false);

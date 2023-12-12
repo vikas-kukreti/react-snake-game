@@ -7,9 +7,13 @@ export function randomXY() {
   };
 }
 
-export function randomFood() {
+export function randomFood(snake: { x: number; y: number }[]) {
+  let food = randomXY();
+  while (snake.find((p) => p.x === food.x && p.y === food.y)) {
+    food = randomXY();
+  }
   return {
-    ...randomXY(),
+    ...food,
     emoji: foodList[Math.floor(foodList.length * Math.random())],
   };
 }
